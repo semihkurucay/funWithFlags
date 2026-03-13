@@ -17,8 +17,6 @@ Sistemde yüklü olan bayrakların kime ait olduğunu 4 şık arasından doğru 
 
 ## 📸 Ekran Görüntüleri
 
-| Giriş Ekranı | Soru Ekranı |
-|:---:|:---:|
-| <img src="images/intro.png" width="300"> | <img src="images/gameplay.png" width="300"> |
-| **Doğru/Yanlış Bildirimi** | **Oyun Sonu** |
-| <img src="images/feedback.png" width="300"> | <img src="images/gameover.png" width="300"> |
+| Giriş Ekranı | Doğru Bildirimi | Yanlış Bildirimi | Oyun Sonu |
+|:---:|:---:|:---:|:---:|
+| <img src="Images/Giris.png" width="200"> | <img src="Images/Dogru.png" width="200"> | <img src="Images/Yanlis.png" width="200"> | <img src="Images/Bitis.png" width="200"> |
