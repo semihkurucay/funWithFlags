@@ -1,0 +1,10 @@
+bavaria,Bavyera
+czech_republic,Çekya
+liechtenstein,Lihtenştayn
+moldova,Moldova
+nepal,Nepal
+romania,Romanya
+saint_kitts_and_nevis,Saint Kitts ve Nevis
+sheldon,Sheldon'ın Apartmanı
+slovakia,Slovakya
+united_states,Amerika Birleşik Devletleri

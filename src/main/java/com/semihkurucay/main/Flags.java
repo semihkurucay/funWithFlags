@@ -1,31 +1,33 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.semihkurucay.main;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author semih
- */
 public class Flags {
     
     public static Map<String, String> getFlags(){
         Map<String, String> flags = new HashMap<>();
         
-        flags.put("bavaria", "Bavyera");
-        flags.put("czech_republic", "Çekya");
-        flags.put("liechtenstein", "Lihtenştayn");
-        flags.put("moldova", "Moldova");
-        flags.put("nepal", "Nepal");
-        flags.put("romania", "Romanya");
-        flags.put("saint_kitts_and_nevis", "Saint Kitts ve Nevis");
-        flags.put("sheldon", "Sheldon");
-        flags.put("slovakia", "Slovakya");
-        flags.put("united_states", "Amerika Birleşik Devletleri");
+        try{
+            InputStream in = Flags.class.getResourceAsStream("/flag_names.txt");
+            BufferedReader reader = new BufferedReader(new InputStreamReader(in, "UTF-8"));
+            
+            String line;
+            
+            while((line = reader.readLine()) != null){
+                if(!line.trim().isEmpty()){
+                    String[] names = line.split(",");
+                    flags.put(names[0], names[1]);
+                }
+            }
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(JOptionPane.getRootFrame(), "flag_names.txt okunurken hata ile karşılaşıldı.", "flag_names.txt Okunamadı", JOptionPane.ERROR_MESSAGE);
+        }
         
         return flags;
     }
